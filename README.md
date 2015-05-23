@@ -1,4 +1,4 @@
-# sim-ephemeral
+# sim-ephemeral [![Build Status](https://travis-ci.org/homegrownlabs/sim-ephemeral.svg?branch=master)](https://travis-ci.org/homegrownlabs/sim-ephemeral)
 
 Helpers for Simulant's process state service
 
@@ -26,7 +26,7 @@ For example:
 (ns my.ns
   (:require [io.homegrown.sim-ephemeral :refer [store]]
             [simulant.util :as util :refer [e solo]]))
-  
+
 (declare do-something)
 (declare extract-value)
 
