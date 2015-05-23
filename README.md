@@ -20,6 +20,26 @@ validation.
    access to a process-local, in-memory Datomic database. See individual
    function docs for more information on usage.
 
+For example:
+
+```clj
+(ns my.ns
+  (:require [io.homegrown.sim-ephemeral :refer [store]]
+            [simulant.util :as util :refer [e solo]]))
+  
+(declare do-something)
+(declare extract-value)
+
+(defmethod sim/perform-action :action.type/myAction [action process]
+  (try
+    (let [agent        (-> action :agent/_actions solo)
+          [resp nsecs] (timed (do-something))]
+      (store agent :some-info :db.cardinality/one :db.type/string (extract-value resp))
+      (log action process resp nsecs))
+    (catch Throwable t
+      (log-error action process t 0))))
+```
+
 ## Caveats
 
 Because process-state stores are local to a Simulant process, agents running
