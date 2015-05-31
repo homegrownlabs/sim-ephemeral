@@ -4,10 +4,5 @@ install:
 - chmod 755 boot
 - ./boot -V
 script: ./boot test
-env:
-  global:
-    - JAVA_OPTS="-XX:MaxPermSize=2g -Xms512m -Xmx4g -XX:+UseConcMarkSweepGC -XX:+CMSPermGenSweepingEnabled -XX:+CMSClassUnloadingEnabled"
 jdk:
-  - openjdk7
-  - oraclejdk7
   - oraclejdk8
