@@ -4,6 +4,9 @@ install:
 - chmod 755 boot
 - ./boot -V
 script: ./boot test
+env:
+  global:
+    - JAVA_OPTS="-XX:MaxPermSize=512m -Xmx4g"
 jdk:
   - openjdk7
   - oraclejdk7
