@@ -2,7 +2,10 @@ language: clojure
 install:
 - wget -O boot https://github.com/boot-clj/boot/releases/download/2.0.0/boot.sh
 - chmod 755 boot
-- ./boot -V
-script: ./boot test
+- "./boot -V"
+script: "./boot test"
 jdk:
-  - oraclejdk8
+- oraclejdk8
+notifications:
+  slack:
+    secure: dBMfWU2I19x56VyR+thUEoGjXIJgDVer2P/LhdYhmeaBgYbsBHwXLgfy3RkSkPYJmXE7SZFzLqw/dkLG51wtEjbHIO8sydPyEciMyKxhQ8XNju2vQJuRkQkeFw/aS5ZjoRhT5Xl3sO18HZk0Xc1Rp8256D9um209qrn3j3CTW7beehQsP1c2VOS3Cj5wZRcyAKP6/AOk2A7yMxzb5Q/h3WAAt0Jb9pw7ghsxamJFEktuwTDOtO2qgj36k2xDEx0UsAupvP1pPtW7Avp6Zx1+mdTjRe5TSitlfQTdsoP7IzWJEAlfGU/EJmu0Kf9jO1IeWmFvIP8ha2r8IiQ5nI0Vak+7vU0PC/Hnsz74v9Tuix++cLfNhO7YG/j9Tdvg7Qe+mZ3tu1EJQhcP31Oyras9gqk/kdq/vkRxVoBgQWoOH9uteOPEMBXz7mDL6PmL+RMMBvXGmH88J0bHzKm6AgiTlOzAGFDCjLy82Q2WIswLGYPxWid+E450z09lsHSo3NponAkd/13UQls3RgR+HhuNSYR7dPHn5bSgMmJCEbA4aboWuh204O0mZI8JTsMW55tKdLNnevowWroxfDoCHnH7PmSFJjuP8pNKEgotGsle04K6h0uAqAAPp5EncFOCEO4WFe5he1dIQJCeDalUOhkFq9RaCRpivhaR+U9puLTrEfY=
