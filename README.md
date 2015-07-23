@@ -45,6 +45,11 @@ For example:
 Because process-state stores are local to a Simulant process, agents running
 on separate processes *will not* be able to access each other's keys/values."
 
+## Attribution
+
+* [Simulant](github.com/datomic/simulant) by Metadata Partners. Licensed Under: [EPL](http://opensource.org/licenses/eclipse-1.0.php).
+* [simulant-example](https://github.com/mtnygard/simulant-example/) by [mtnygard](https://github.com/mtnygard/). Licensed Under: [EPL](http://opensource.org/licenses/eclipse-1.0.php). sim-ephemeral is inspired by Michael's take on utilizing the process service.
+
 ## License
 
 The MIT License (MIT)
